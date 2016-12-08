@@ -1,6 +1,6 @@
 {
   "name": "string-helpers",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "String helpers collection",
   "main": "string-helpers.js",
   "scripts": {
