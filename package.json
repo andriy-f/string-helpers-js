@@ -1,0 +1,23 @@
+{
+  "name": "string-helpers",
+  "version": "0.1.0",
+  "description": "String helpers collection",
+  "main": "string-helpers.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/johnsmith9264/string-helpers.git"
+  },
+  "keywords": [
+    "library",
+    "javascript"
+  ],
+  "author": "Andriy Fetsyuk <forspam.smith@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnsmith9264/string-helpers/issues"
+  },
+  "homepage": "https://github.com/johnsmith9264/string-helpers#readme"
+}
