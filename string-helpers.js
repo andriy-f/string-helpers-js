@@ -1,20 +1,33 @@
-(function () {
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define([], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        // Node. Does not work with strict CommonJS, but
+        // only CommonJS-like environments that support module.exports,
+        // like Node.
+        module.exports = factory();
+    } else {
+        // Browser globals (root is window)
+        root.stringUtils = factory();
+  }
+}(this, function () {
     /**
-     * @member stringUtils
-     * Contains string util functions 
+     *  Contains string utility functions 
      */
-    var stringUtils = {};
+    var stringUtils = {
+        trimLeft: trimLeft
+    };
 
-    stringUtils.trimLeft = trimLeft;
-
-    exports.stringUtils = stringUtils;
+    return {
+        stringUtils: stringUtils
+    };
 
     /**
-     * @function 
-     * 
      * Trims input source string from left by character specified
+     * 
      * @param {string} source input source sting
-     * @param trimCHars {string} trim characters. Any of these characters will be removed from left side of input string
+     * @param {string} trimChars characters. Any of these characters will be removed from left side of input string
      */
     function trimLeft(source, trimChars) {
         var trimCharsHashTable = string2hashtable(trimChars),
@@ -28,19 +41,15 @@
     }
 
     /**
-     * @function containsAny
-     * 
-     * @param sourceHashTable {object}
-     * @param char {string}
+     * @param {object} sourceHashTable
+     * @param {string} char
      */
     function containsAny(sourceHashTable, char) {
         return !!sourceHashTable[char];
     }
 
     /**
-     * @function string2hashtable
-     * 
-     * @param source {string}
+     * @param {string} source
      */
     function string2hashtable(source) {
         var res = {};
@@ -50,4 +59,4 @@
 
         return res;
     }
-})();
+}));
