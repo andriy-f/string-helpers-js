@@ -4,7 +4,7 @@
   "description": "String helpers collection",
   "main": "string-helpers.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
