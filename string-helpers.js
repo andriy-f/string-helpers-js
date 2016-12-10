@@ -16,7 +16,8 @@
      *  Contains string utility functions 
      */
     var stringUtils = {
-        trimLeft: trimLeft
+        trimLeft: trimLeft,
+        trimRight: trimRight
     };
 
     return {
@@ -35,6 +36,23 @@
 
         while (containsAny(trimCharsHashTable, result[0])) {
             result = result.substr(1);
+        }
+
+        return result;
+    }
+
+    /**
+     * Trims input source string from right by character specified
+     * 
+     * @param {string} source input source sting
+     * @param {string} trimChars characters. Any of these characters will be removed from right side of input string
+     */
+    function trimRight(source, trimChars) {
+        var trimCharsHashTable = string2hashtable(trimChars),
+            result = source.substr(0);
+
+        while (containsAny(trimCharsHashTable, result[result.length - 1])) {
+            result = result.slice(0, -1);
         }
 
         return result;
