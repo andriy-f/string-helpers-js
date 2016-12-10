@@ -4,8 +4,13 @@
   "description": "String helpers collection",
   "main": "string-helpers.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint string-helpers.js spec/**/*.js",
+    "test": "jasmine"
   },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/johnsmith9264/string-helpers-js.git"
@@ -19,5 +24,14 @@
   "bugs": {
     "url": "https://github.com/johnsmith9264/string-helpers/issues"
   },
-  "homepage": "https://github.com/johnsmith9264/string-helpers#readme"
+  "homepage": "https://github.com/johnsmith9264/string-helpers#readme",
+  "devDependencies": {
+    "eslint": "^3.12.0",
+    "jasmine": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-browserify": "^5.1.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "pre-commit": "^1.2.0"
+  }
 }
