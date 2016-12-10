@@ -4,6 +4,7 @@
   "description": "String helpers collection",
   "main": "string-helpers.js",
   "scripts": {
+    "lint": "eslint string-helpers.js spec/**/*.js",
     "test": "jasmine"
   },
   "repository": {
