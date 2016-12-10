@@ -9,5 +9,9 @@
         it('Should trim slashes from left', function () {
             expect(stringUtils.trimLeft('///some-res/', '/')).toBe('some-res/');
         });
+
+        it('Should trim slashes and spaces from left', function () {
+            expect(stringUtils.trimLeft(' /some-res/', '/ ')).toBe('some-res/');
+        });
     });
 })();
