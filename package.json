@@ -7,6 +7,10 @@
     "lint": "eslint string-helpers.js spec/**/*.js",
     "test": "jasmine"
   },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/johnsmith9264/string-helpers-js.git"
