@@ -10,8 +10,8 @@
     } else {
         // Browser globals (root is window)
         root.stringUtils = factory();
-  }
-}(this, function () {
+    }
+} (this, function () {
     /**
      *  Contains string utility functions 
      */
