@@ -1,4 +1,5 @@
 import { trimLeft, trimRight } from '../src/string-helpers.js';
+import { describe, expect, it } from 'vitest'
 
 describe('stringUtils tests', function () {
 
