@@ -13,7 +13,8 @@
   "scripts": {
     "build:esm": "tsc --project tsconfig.esm.json",
     "build:cjs": "tsc --project tsconfig.cjs.json",
-    "build": "pnpm run build:esm && pnpm run build:cjs",
+    "build:umd": "tsc --project tsconfig.umd.json",
+    "build": "pnpm run build:esm && pnpm run build:cjs && pnpm run build:umd",
     "lint": "eslint",
     "test": "jasmine"
   },
