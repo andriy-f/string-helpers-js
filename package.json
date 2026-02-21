@@ -4,9 +4,16 @@
   "description": "String helpers collection",
   "main": "string-helpers.js",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/string-helpers.js",
+      "require": "./dist/cjs/string-helpers.js"
+    }
+  },
   "scripts": {
     "build:esm": "tsc --project tsconfig.esm.json",
     "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build": "pnpm run build:esm && pnpm run build:cjs",
     "lint": "eslint",
     "test": "jasmine"
   },
