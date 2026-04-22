@@ -6,7 +6,7 @@ export default {
     output: {
         path: path.resolve(import.meta.dirname, "dist/umd"),
         filename: "string-helpers.js",
-        library: "MyTsPackage",
+        library: "stringHelpers", // exposed as window.stringHelpers in browser
         libraryTarget: "umd"
     },
     module: {
@@ -17,7 +17,7 @@ export default {
                 use: {
                     loader: "ts-loader",
                     options: {
-                        configFile: "tsconfig.umd.json"
+                        configFile: "tsconfig.umd2.json"
                     }
                 }
             }
